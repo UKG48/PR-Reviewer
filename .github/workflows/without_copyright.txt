@@ -43,5 +43,4 @@ class BinarySearch {
 							+ result);
 	}
 }
-/* This code is by Rajat Mishra */
 
