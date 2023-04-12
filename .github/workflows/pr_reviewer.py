@@ -4,7 +4,7 @@ import openai
 import os
 import subprocess
 
-#Reading environment variables set in github.
+#Reading repository variables set in github.
 ACCOUNT_GITHUB_TOKEN = os.getenv('ACCOUNT_GITHUB_TOKEN')
 REPO_NAME = os.getenv('REPO_NAME')
 REPO_OWNER = os.getenv('REPO_OWNER')
