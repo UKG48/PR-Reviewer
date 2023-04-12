@@ -9,7 +9,7 @@ ACCOUNT_GITHUB_TOKEN = os.getenv('ACCOUNT_GITHUB_TOKEN')
 REPO_NAME = os.getenv('REPO_NAME')
 REPO_OWNER = os.getenv('REPO_OWNER')
 
-#Reading secrets set in github.
+#Reading repository secrets set in github.
 SECRET_OPENAI_TOKEN = os.environ['SECRET_OPENAI_TOKEN']
 SECRET_GITHUB_KEY = os.environ['SECRET_GITHUB_KEY']
 
