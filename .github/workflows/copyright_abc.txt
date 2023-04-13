@@ -1,6 +1,6 @@
 /*
- * Copyright (C) UKG
- * Copyright (C) Ultimate Kronos Group, Inc.
+ * Copyright (C) ABC
+ * Copyright (C) ABC Technologies, Inc.
  */
  
 // Java implementation of recursive Binary Search
