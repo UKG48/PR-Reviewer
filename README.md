@@ -11,9 +11,9 @@
 - Rely on existing OpenAI model to get a feedback on the code.
 - Add custom rules and train model to catch any deviations to that rulecomments and recommendation for merge.
 - Large Language Model evaluated
- - 1. Open AI (text-davinci-003 AKA GPT-3)
- - Large Language Model used
- - 1. Open AI (gpt-3.5-turbo)
+  - Open AI (text-davinci-003 AKA GPT-3)
+- Large Language Model used
+  - Open AI (gpt-3.5-turbo)
  
  ## Its Impact
  - The solution will have an immediate impact by catching common problems as listed below:
