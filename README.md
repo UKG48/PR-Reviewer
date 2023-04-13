@@ -40,13 +40,13 @@
 ## How to integrate with any github repo ?
 - Checkout the main branch of this repo and add **.github/workflows`** folder in any desired github repo.
 - 3 repository secrets and 2 variables also need to be added in each github repo for this action to work.
- - 1. Secrets:
-	- 1. ACCOUNT_GITHUB_TOKEN
-	- 2. SECRET_GITHUB_KEY
-	- 3. SECRET_OPENAI_TOKEN
+ - Secrets:
+	- ACCOUNT_GITHUB_TOKEN
+	- SECRET_GITHUB_KEY
+	- SECRET_OPENAI_TOKEN
 - 2. Variables
-	- 1. REPO_NAME
-	- 2. REPO_OWNER
+	- REPO_NAME
+	- REPO_OWNER
 - Once all the above changes are done, now raise a PR and the action will be triggered automatically.
 
 ## How to execute the python file locally ?
