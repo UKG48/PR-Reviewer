@@ -5,16 +5,16 @@ import os
 import subprocess
 
 #Reading repository variables set in github.
-ACCOUNT_GITHUB_TOKEN = os.getenv('ACCOUNT_GITHUB_TOKEN')
 REPO_NAME = os.getenv('REPO_NAME')
 REPO_OWNER = os.getenv('REPO_OWNER')
 
 #Reading repository secrets set in github.
+ACCOUNT_GITHUB_TOKEN = os.environ['ACCOUNT_GITHUB_TOKEN']
 SECRET_OPENAI_TOKEN = os.environ['SECRET_OPENAI_TOKEN']
 SECRET_GITHUB_KEY = os.environ['SECRET_GITHUB_KEY']
 
 #curl command to get details of the lastest pull request raised.
-mycmd=subprocess.run(f'curl -v --silent https://{ACCOUNT_GITHUB_TOKEN}:x-oauth-basic@api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/pulls 2>&1 | grep -E -w "url|head|ref|base" | head -n 12', shell=True, capture_output=True, text=True)
+mycmd=subprocess.run(f'curl -v --silent https://{ACCOUNT_GITHUB_TOKEN}:x-oauth-basic@api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/pulls 2>&1 | grep -E -w "url|head|ref|base" | head -n 18', shell=True, capture_output=True, text=True)
 
 
 def chat_with_chatgpt(prompt):
