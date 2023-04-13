@@ -42,9 +42,9 @@ def pr_review_prompt(original_file, fileName, added_changes, removed_changes):
     prompt = f"{comment_p} \n originalFile: {original_file} \n added_changes: {added_changes} \n removed_changes: {removed_changes}"
     return prompt
 
-def custom_training_prompt(copyright, without_copyright, copyright_ukg, new_file):
-    comment_p_1 = f"Providng you a file, you act as a copywrite checker and tell whether there is any copyright present for ukg organisation in the file Input or not"
-    prompt_1 = f"{comment_p_1} \n Input: {copyright} \n Output: 'The file Input contains copyright but not for UKG organization.' \n Input: {without_copyright} \n Output: 'Your file does not have copyright. Please add copyrights before merging'\n Input: {copyright_ukg} \n Output: 'The file contains copyright for UKG organization.' \n  Input: {new_file} \n Output: "
+def custom_training_prompt(copyright, without_copyright, copyright_abc, new_file):
+    comment_p_1 = f"Providng you a file, you act as a copywrite checker and tell whether there is any copyright present for abc organisation in the file Input or not"
+    prompt_1 = f"{comment_p_1} \n Input: {copyright} \n Output: 'The file Input contains copyright but not for ABC organization.' \n Input: {without_copyright} \n Output: 'Your file does not have copyright. Please add copyrights before merging'\n Input: {copyright_abc} \n Output: 'The file contains copyright for ABC organization.' \n  Input: {new_file} \n Output: "
     return prompt_1
         
 #Details required for OpenAI API
@@ -66,14 +66,14 @@ url1 = f'https://api.github.com/repos/{owner}/{repo}/compare/{base}...{head}'
 url2 = f"https://api.github.com/repos/{owner}/{repo}/pulls/{pull_number}"
 
 #files for training chatgpt
-file1 = open(".github/workflows/copyright_nonukg.txt","r+")
+file1 = open(".github/workflows/copyright_nonabc.txt","r+")
 copyright = file1.read()
 
 file2 = open(".github/workflows/without_copyright.txt","r+")
 without_copyright = file2.read()
 
-file3 = open(".github/workflows/copyright_ukg.txt","r+")
-copyright_ukg = file3.read()
+file3 = open(".github/workflows/copyright_abc.txt","r+")
+copyright_abc = file3.read()
 
 #PR details
 pr_response = requests.get(url1, headers=headers)
@@ -112,7 +112,7 @@ if pr_response.status_code == 200:
         removed_changes = '\n'.join(delete_changes)
 
         #Prepare data and get response from chatgpt for custom training prompt.
-        prompt_trainng = custom_training_prompt(copyright, without_copyright, copyright_ukg, new_file)
+        prompt_trainng = custom_training_prompt(copyright, without_copyright, copyright_abc, new_file)
         print(f"prompt_trainng: {prompt_trainng}")
         chatgpt_training_response = chat_with_chatgpt(prompt_trainng)
         print("ChatGPT Training Response:::",end='\n')
