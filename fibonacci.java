@@ -1,7 +1,6 @@
 //This class is an implementation of fibonacci series.
 class FibonacciExample {
     public static void main(String args[]) {
-
         int p1 = 0, p2 = 1, p3, i, count = 10; // changed the variables
         System.out.print(p1 + " " + p2);// printing 0 and 1
 
@@ -12,6 +11,5 @@ class FibonacciExample {
             p1 = p2;
             p2 = p3;
         }
-
     }
 }
