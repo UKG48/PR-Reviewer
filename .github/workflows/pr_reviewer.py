@@ -15,6 +15,7 @@ SECRET_GITHUB_KEY = os.environ['SECRET_GITHUB_KEY']
 
 #curl command to get details of the lastest pull request raised.
 mycmd=subprocess.run(f'curl -v --silent https://{ACCOUNT_GITHUB_TOKEN}:x-oauth-basic@api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/pulls 2>&1 | grep -E -w "url|head|ref|base" | head -n 12', shell=True, capture_output=True, text=True)
+print(mycmd)
 
 
 def chat_with_chatgpt(prompt):
