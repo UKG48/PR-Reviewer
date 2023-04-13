@@ -11,18 +11,18 @@
 - Rely on existing OpenAI model to get a feedback on the code.
 - Add custom rules and train model to catch any deviations to that rulecomments and recommendation for merge.
 - Large Language Model evaluated
- - 1. Open AI (text-davinci-003 AKA GPT-3)
- - Large Language Model used
- - 1. Open AI (gpt-3.5-turbo)
+  - Open AI (text-davinci-003 AKA GPT-3)
+- Large Language Model used
+  - Open AI (gpt-3.5-turbo)
  
  ## Its Impact
  - The solution will have an immediate impact by catching common problems as listed below:
-   - 1. Language specific syntactical errors
-   - 2. Adherence to coding standards
-   - 3. Provide code performance, complexity and provide suggestions to improve code style and structure
-   - 4. Provide errors and also lists suggestions to fix them
+   - Language specific syntactical errors
+   - Adherence to coding standards
+   - Provide code performance, complexity and provide suggestions to improve code style and structure
+   - Provide errors and also lists suggestions to fix them
  - Custom validation can be added by training the model. Some use cases can be –
-   - 1. Check for Copyright
+   - Check for Copyright
  - There are some solutions available in market, but we could not find a production ready solution. Also, given the fact that we would like to add customized rules, we need a customized training of the model.
 - The solution can be adopted across the complete development community.
 
@@ -40,13 +40,13 @@
 ## How to integrate with any github repo ?
 - Checkout the main branch of this repo and add **.github/workflows`** folder in any desired github repo.
 - 3 repository secrets and 2 variables also need to be added in each github repo for this action to work.
- - 1. Secrets:
-	- 1. ACCOUNT_GITHUB_TOKEN
-	- 2. SECRET_GITHUB_KEY
-	- 3. SECRET_OPENAI_TOKEN
-- 2. Variables
-	- 1. REPO_NAME
-	- 2. REPO_OWNER
+ - Secrets:
+	- ACCOUNT_GITHUB_TOKEN
+	- SECRET_GITHUB_KEY
+	- SECRET_OPENAI_TOKEN
+ - Variables:
+	- REPO_NAME
+	- REPO_OWNER
 - Once all the above changes are done, now raise a PR and the action will be triggered automatically.
 
 ## How to execute the python file locally ?
