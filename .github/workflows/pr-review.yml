@@ -24,7 +24,7 @@ jobs:
           pip install openai
       - name: execute py script 
         env:
-           ACCOUNT_GITHUB_TOKEN: ${{ vars.ACCOUNT_GITHUB_TOKEN }}
+           ACCOUNT_GITHUB_TOKEN: ${{ secrets.ACCOUNT_GITHUB_TOKEN }}
            REPO_NAME: ${{ vars.REPO_NAME }}
            REPO_OWNER: ${{ vars.REPO_OWNER }}
            SECRET_GITHUB_KEY: ${{ secrets.SECRET_GITHUB_KEY }}
