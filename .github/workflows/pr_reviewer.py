@@ -118,7 +118,7 @@ if pr_response.status_code == 200:
         print("ChatGPT Training Response:::",end='\n')
         for i in chatgpt_training_response:
             sys.stdout.write(i)
-        post_review(headers, url2, chatgpt_response, fileName)
+        post_review(headers, url2, chatgpt_training_response, fileName)
         
         #Prepare data and get response from chatgpt for pr review.
         prompt = pr_review_prompt(original_file, fileName, added_changes, removed_changes)
