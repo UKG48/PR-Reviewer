@@ -13,7 +13,7 @@ class FibonacciExample {
                 p2 = p3;
             }
         } catch (Exception e) {
-            
+            System.out.println(e.getMessage());
         }
     }
 }
