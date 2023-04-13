@@ -17,12 +17,12 @@
  
  ## Its Impact
  - The solution will have an immediate impact by catching common problems as listed below:
-   - 1. Language specific syntactical errors
-   - 2. Adherence to coding standards
-   - 3. Provide code performance, complexity and provide suggestions to improve code style and structure
-   - 4. Provide errors and also lists suggestions to fix them
+   - Language specific syntactical errors
+   - Adherence to coding standards
+   - Provide code performance, complexity and provide suggestions to improve code style and structure
+   - Provide errors and also lists suggestions to fix them
  - Custom validation can be added by training the model. Some use cases can be –
-   - 1. Check for Copyright
+   - Check for Copyright
  - There are some solutions available in market, but we could not find a production ready solution. Also, given the fact that we would like to add customized rules, we need a customized training of the model.
 - The solution can be adopted across the complete development community.
 
@@ -44,7 +44,7 @@
 	- ACCOUNT_GITHUB_TOKEN
 	- SECRET_GITHUB_KEY
 	- SECRET_OPENAI_TOKEN
-- 2. Variables
+ - Variables:
 	- REPO_NAME
 	- REPO_OWNER
 - Once all the above changes are done, now raise a PR and the action will be triggered automatically.
