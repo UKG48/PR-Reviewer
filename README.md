@@ -53,4 +53,5 @@
 - Checkout the main branch of this repo.
 - Install all the dependencies required by python project.
 - The python file needs to be executed on an ubuntu platform like wsl command line.
+- The above 3 secrets and 2 variables needs to be hardcoded instead of reading from github with correct values.
 - Command: **python3 .github/workflows/pr_reviewer.py**
