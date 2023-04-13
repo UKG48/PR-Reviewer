@@ -12,8 +12,8 @@ class FibonacciExample {
                 p1 = p2;
                 p2 = p3;
             }
-            throw new NullPointerException();
-        } catch (ArithmeticException e) {
+        } catch (Exception e) {
+            
         }
     }
 }
