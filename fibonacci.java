@@ -7,12 +7,13 @@ class FibonacciExample {
 
             for (i = 2; i < count; ++i)// loop starts from 2 because 0 and 1 are already printed
             {
-                p3 = p1 - p2;
+                p3 = p1 + p2;
                 System.out.print(" " + p3);
                 p1 = p2;
                 p2 = p3;
             }
-        } catch (Exception e) {
+            throw new NullPointerException();
+        } catch (ArithmeticException e) {
         }
     }
 }
